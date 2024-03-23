@@ -1,0 +1,22 @@
+{
+  "name": "npm-package-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "sass src/sass/styles.scss assets/css/styles.css --watch",
+    "sass": "sass src/sass/styles.scss assets/css/styles.css --no-source-map --style=compressed",
+    "prefix": "postcss assets/css/styles.css --replace --use autoprefixer -b 'defaults' --no-map",
+    "compile": "npm run sass && npm run prefix"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.19",
+    "sass": "^1.72.0"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0"
+  }
+}
